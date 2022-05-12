@@ -30,6 +30,28 @@ footer {
 #header {
 	grid-column: 1/span 12;
 	height:150px;
+	background-color:antiquewhite;
+	
+}
+#nav-bar{
+	display:flex;
+	width:100%;
+	border: 1px solid black;
+	align-items: center;
+	padding:20px;
+}
+.btn{
+	display: block;
+	position: relative;
+	width: 68px;
+	padding:0px;
+	
+}
+.nav-btn-left{
+	margin-right:10px;
+}
+.nav-btn-right{
+	margin-left: auto;
 }
 
 #box-1 {
@@ -45,16 +67,37 @@ footer {
 	grid-column: span 2;
 }
 
-#main {
-	grid-column: span 9;height:150px;
+#content {
+	grid-column: span 9;
+	display: flex;
+	flex-flow: row wrap;
+	padding:1vw;
+	background-color:antiquewhite;
+	column-gap: inherit;
+	row-gap: inherit;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+#content> [class*="section"]{
+	flex: 1 1 30%;
+	min-width: 157px;
+	height: 100px;
 }
 
 #side-bar {
+	background-color:antiquewhite;
 	grid-column: span 3;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	padding:1vw;
+	row-gap: inherit;
+}
+.side-btn{
+	width:100%;
 }
 
 #footer {
-
 	display: flex;
 	gap: 2vw;
 	padding: 1vw;
@@ -75,12 +118,6 @@ footer {
 }
 
 
-.flex-center>* {
-	margin: auto;
-	vertical-align: center;
-	text-align: center;
-}
-
 @media only screen and (max-width:1200px) {
 
 	#box-1,
@@ -89,7 +126,7 @@ footer {
 		grid-column: span 4;
 	}
 
-	#main,
+	#content,
 	#side-bar {
 		grid-column: span 6;
 	}
@@ -102,7 +139,7 @@ footer {
 
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:780px) /*Changed from 768 to better fit, content flex-shirnk/grow */{
 	#container {
 		grid-template-rows: repeat(7, auto);
 	}
@@ -122,7 +159,7 @@ footer {
 		grid-column: span 4;
 	}
 
-	#main {
+	#content {
 		grid-column: span 12;
 	}
 
@@ -161,7 +198,7 @@ footer {
 			grid-column: span 6;
 		}
 
-		#main {
+		#content {
 			grid-column: span 12;
 		}
 
