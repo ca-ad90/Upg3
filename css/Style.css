@@ -80,7 +80,7 @@ footer {
 }
 #content> [class*="section"]{
 	flex: 1 1 30%;
-	min-width: 157px;
+	min-width: 148px;
 	height: 100px;
 }
 
@@ -139,7 +139,7 @@ footer {
 
 }
 
-@media only screen and (max-width:780px) /*Changed from 768 to better fit, content flex-shirnk/grow */{
+@media only screen and (max-width:783px) /*Changed from 768 to better fit, content flex-shirnk/grow */{
 	#container {
 		grid-template-rows: repeat(7, auto);
 	}
